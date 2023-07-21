@@ -16,4 +16,7 @@ h1{
     float: left; /* moves div to the left,right. center is the same w/left? */
 }
 
-
+.right{
+    float: left;
+    margin-left: 30px;
+}
