@@ -6,3 +6,7 @@ h1{
     font-family: 'Shadows Into Light', cursive;
     font-size: 75px;
 }
+
+.description{
+    width: 600px;
+}
