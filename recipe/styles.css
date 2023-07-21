@@ -10,3 +10,10 @@ h1{
 .description{
     width: 600px;
 }
+
+.left{
+    width: 600px;
+    float: left; /* moves div to the left,right. center is the same w/left? */
+}
+
+
