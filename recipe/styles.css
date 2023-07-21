@@ -7,6 +7,10 @@ h1{
     font-size: 75px;
 }
 
+p{
+    font-style: italic;
+}
+
 .description{
     width: 600px;
 }
