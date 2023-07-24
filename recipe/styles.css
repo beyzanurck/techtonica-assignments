@@ -1,0 +1,31 @@
+body{
+    background-color: #FBFDD1;
+}
+
+h1{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 75px;
+}
+
+p{
+    font-style: italic;
+}
+
+.description{
+    width: 600px;
+}
+
+.left{
+    width: 600px;
+    float: left; /* moves div to the left,right. center is the same w/left? */
+}
+
+.right{
+    float: left;
+    margin-left: 30px;
+    width: 600px;
+}
+
+h2{
+    color: #469b4c;
+}
