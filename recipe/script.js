@@ -26,7 +26,12 @@ const webLink = {
     "Chicken Pasta" : "https://www.budgetbytes.com/category/recipes/pasta/"
 }
 
-
+for (let x in webLink){
+    const itemToATag = document.createElement("a")
+    itemToATag.setAttribute("href", webLink[x])
+    itemToATag.innerHTML = x
+    divOfOtherRecipe.appendChild(itemToATag)
+}
 
 
 
