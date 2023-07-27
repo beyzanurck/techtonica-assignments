@@ -39,6 +39,9 @@ buttonComments.setAttribute("type", "button")
 buttonComments.textContent = "Click me to see what people said about the food"
 
 const divComments = document.createElement("div")
+divComments.style.marginTop = "20px"
+divComments.style.marginBottom = "20px"
+
 divOfOtherRecipe.appendChild(divComments)
 divComments.appendChild(buttonComments)
 
