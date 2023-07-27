@@ -30,6 +30,7 @@ for (let x in webLink){
     const itemToATag = document.createElement("a")
     itemToATag.setAttribute("href", webLink[x])
     itemToATag.innerHTML = x
+    itemToATag.style.display = "block"
     divOfOtherRecipe.appendChild(itemToATag)
 }
 
