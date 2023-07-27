@@ -45,14 +45,18 @@ divComments.style.marginBottom = "20px"
 divOfOtherRecipe.appendChild(divComments)
 divComments.appendChild(buttonComments)
 
-//CREATE P TAGS FOR COMMENTS
-let comments = ["My daughter wanna eat it everyday!!", "Should I cook the sauce first?", "I love that!"]
+buttonComments.addEventListener("click", () => {
+    //CREATE P TAGS FOR COMMENTS
+    let comments = ["My daughter wanna eat it everyday!!", "Should I cook the sauce first?", "I love that!"]
 
-for(let i = 0; i < comments.length; i++){
-    const pTag = document.createElement("p")
-    pTag.textContent = comments[i]
-    divComments.appendChild(pTag)
-}
+    for(let i = 0; i < comments.length; i++){
+        const pTag = document.createElement("p")
+        pTag.textContent = comments[i]
+        divComments.appendChild(pTag)
+    }
+})
+
+
 
 
 
