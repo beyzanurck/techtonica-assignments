@@ -21,6 +21,13 @@ for(let i = 0; i <  itemOfInstructions.length; i++){
 const divOfOtherRecipe = document.getElementById("otherRecipe")
 
 
+const webLink = {
+    "Pasta and Noodle" : "https://www.foodandwine.com/pasta-noodles/pasta",
+    "Chicken Pasta" : "https://www.budgetbytes.com/category/recipes/pasta/"
+}
+
+
+
 
 
 
