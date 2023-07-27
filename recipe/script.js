@@ -7,6 +7,11 @@ for(let i = 0; i <  itemOfInstructions.length; i++){
 
     const checkbox = document.createElement("input")
     checkbox.type ="checkbox"
+    
+    
+    checkbox.addEventListener("click", function () {
+        item.classList.toggle("checked");
+    });
 
     item.prepend(checkbox)
 }

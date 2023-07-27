@@ -31,5 +31,7 @@ h2{
 } 
 
 
-
+.checked {
+    text-decoration: line-through;
+}
 
