@@ -3,11 +3,11 @@ olOfInstructions.id = "instructions"
 
 const itemOfInstructions  = olOfInstructions.getElementsByTagName("li")
 for(let i = 0; i <  itemOfInstructions.length; i++){
-    const list = itemOfInstructions[i]
+    const item = itemOfInstructions[i]
 
     const checkbox = document.createElement("input")
     checkbox.type ="checkbox"
 
-    list.prepend(checkbox)
+    item.prepend(checkbox)
 }
 
