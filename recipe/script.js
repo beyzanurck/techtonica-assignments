@@ -1,3 +1,4 @@
+//CHECKBOX
 const olOfInstructions = document.querySelector("ol")
 olOfInstructions.id = "instructions"
 
@@ -7,7 +8,7 @@ for(let i = 0; i <  itemOfInstructions.length; i++){
 
     const checkbox = document.createElement("input")
     checkbox.type ="checkbox"
-    
+    //item.classList.add("checked") you always have a line through the text
     
     checkbox.addEventListener("click", function () {
         item.classList.toggle("checked");
@@ -16,3 +17,13 @@ for(let i = 0; i <  itemOfInstructions.length; i++){
     item.prepend(checkbox)
 }
 
+//NEW ITEM TO THE OTHER SPAGETTI RECIPE
+const divOfOtherRecipe = document.getElementById("otherRecipe")
+
+
+
+
+
+
+
+ 
