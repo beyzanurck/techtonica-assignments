@@ -12,6 +12,10 @@ for(let i = 0; i <  itemOfInstructions.length; i++){
     
     checkbox.addEventListener("click", function () {
         item.classList.toggle("checked");
+
+        if(i == itemOfInstructions.length-1){
+            confetti()
+        }
     });
 
     item.prepend(checkbox)
