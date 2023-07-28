@@ -35,3 +35,17 @@ h2{
     text-decoration: line-through;
 }
 
+
+img {
+    max-width: 75%;
+    height: auto;
+}
+  
+
+@media (min-width: 1081px) {
+    img {
+        max-width: 100%
+    }
+}
+
+
