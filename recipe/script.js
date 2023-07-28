@@ -40,7 +40,7 @@ for (let x in webLink){
 //CREATE BUTTON TO SEE COMMENTS
 const buttonComments = document.createElement("button")
 buttonComments.setAttribute("type", "button")
-buttonComments.textContent = "Click me to see what people said about the food"
+buttonComments.textContent = "Comments"
 
 const divComments = document.createElement("div")
 divComments.style.marginTop = "20px"
