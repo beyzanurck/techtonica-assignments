@@ -48,3 +48,8 @@ main hr{
     margin-bottom: 3%;
 }
 
+#projects img {
+    width: 10%;
+    height: auto;
+}
+
