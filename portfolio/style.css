@@ -21,5 +21,22 @@ header img{
     /* text-align: justify; doesnt work */
 }
 
+main {
+    margin-top: 3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img{
+    width: 10%;
+    height: auto;
+}
+
+main  p{
+    width: 25%;
+    /* text-align: justify; doesnt work */
+}
 
 
