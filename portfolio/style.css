@@ -138,3 +138,13 @@ footer{
     color: rgb(127, 113, 83);
     padding: 2%; 
 }
+
+a {
+    color: rgb(127, 113, 83); /* Set the color you want for unvisited links */
+    text-decoration: none; /* Remove underline from all links */
+}
+
+/* Style visited links to be the same as unvisited links */
+a:visited {
+    color:rgb(127, 113, 83);; /* Set the same color for visited links */
+}
