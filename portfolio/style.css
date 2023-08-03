@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 
@@ -18,15 +19,11 @@ header img{
 
 .header-text {
     position: absolute;
-    top: 38%;
+    top: 40%;
     text-align: center;
     color: rgb(127, 113, 83);
 
     font-family: 'Silkscreen', cursive;
-}
-
-.header-text h1{
-    margin-bottom: 0%;
 }
 
 .header-text p{
@@ -45,6 +42,10 @@ main {
     align-items: center;
 }
 
+main h2{
+    color: rgb(250, 103, 69);
+}
+
 main img{
     width: 10%;
     height: auto;
@@ -55,7 +56,7 @@ main  p{
 }
 
 hr{
-    border-top: 3px dotted rgb(194, 189, 189);
+    border-top: 3px dotted rgb(255, 185, 130);
     width: 5%;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -67,6 +68,10 @@ hr{
 display: flex;
 flex-direction: column;
 align-items: center;
+}
+
+#projects h2{
+    color: rgb(250, 103, 69);
 }
 
 
@@ -82,8 +87,10 @@ align-items: center;
     margin-left: 7%;
 }
 
-#projects-container article{
-    top: 5%;
+/* top doesnt work */
+#projects-container ol{
+    top: 7%; 
+    list-style: none;
 }
 
 
@@ -95,7 +102,11 @@ align-items: center;
     flex-direction: column;
     align-items: center;
 } 
-   
+
+#my-ability h2 {
+    color:rgb(250, 103, 69);
+}
+
 #ability-container {
     display: flex;
     justify-content: center;
@@ -120,11 +131,10 @@ align-items: center;
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     margin-top: 5%;
     background-color: rgb(252, 238, 207);
-    color: rgb(201, 160, 77);;
+    color: rgb(127, 113, 83);
     padding: 2%; 
-    text-align: center;
 }
