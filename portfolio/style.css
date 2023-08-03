@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 
@@ -18,10 +19,20 @@ header img{
 
 .header-text {
     position: absolute;
-    top: 35%;
-    /* text-align: justify; doesnt work */
+    top: 40%;
+    text-align: center;
+    color: rgb(127, 113, 83);
+
+    font-family: 'Silkscreen', cursive;
 }
 
+.header-text p{
+    margin-top: 0%;
+    font-size: x-small;
+}
+
+
+/* MAIN */
 
 main {
     margin-top: 3%;
@@ -31,6 +42,11 @@ main {
     align-items: center;
 }
 
+main h2{
+    /* color: rgb(4, 138, 170); */
+    color: rgb(21, 98, 117);
+}
+
 main img{
     width: 10%;
     height: auto;
@@ -38,22 +54,98 @@ main img{
 
 main  p{
     width: 25%;
-    /* text-align: justify; doesnt work */
 }
 
-main hr{
-    border-top: 3px dotted rgb(194, 189, 189);
+hr{
+    border-top: 3px dotted rgb(254, 235, 187);
     width: 5%;
     margin-top: 3%;
     margin-bottom: 3%;
 }
 
-#projects img {
+/* PROJECTS */
+
+#projects {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#projects h2{
+    color: rgb(21, 98, 117);
+}
+
+
+#projects-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+#projects-container img{
+    width: 10%;
+    height: auto;
+    margin-left: 7%;
+}
+
+/* top doesnt work */
+#projects-container ol{
+    top: 7%; 
+    list-style: none;
+}
+
+
+
+/* THE THING I CAN DO */
+
+#my-ability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#my-ability h2 {
+    color: rgb(21, 98, 117);
+}
+
+#ability-container {
+    display: flex;
+    justify-content: center;
+}
+
+#ability-container p {
+    width: 15%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+#ability-container img{
     width: 10%;
     height: auto;
 }
 
-#my-ability img{
-    width: 10%;
-    height: auto;
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin-top: 5%;
+    background-color: rgb(252, 238, 207);
+    color: rgb(127, 113, 83);
+    padding: 2%; 
+}
+
+a {
+    color: rgb(127, 113, 83); /* Set the color you want for unvisited links */
+    text-decoration: none; /* Remove underline from all links */
+}
+
+/* Style visited links to be the same as unvisited links */
+a:visited {
+    color:rgb(127, 113, 83);; /* Set the same color for visited links */
 }
