@@ -13,3 +13,10 @@ console.log(imgTags)
 for (let i = 0; i < imgTags.length; i++) {
     imgTags[i].src = picsPath[i]
 }
+
+//TURNS ALL PICTURES TO THE WHITE
+for (let i = 0; i < imgTags.length; i++) {
+    imgTags[i].src = `/pics/0.PNG`
+}
+
+
