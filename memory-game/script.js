@@ -47,14 +47,45 @@ let sources = randomPaths(picsPath)
 //MAKES KEY-VALUE PAIRS CREATING IMAGES OBJ
 const images = {}
 sources.forEach((element, index) => {
-    images[index] = element
+    images[index] = [element]
 });
 
-console.log(images)
-const imgArray = [...imgTags];
 
-imgArray.forEach((img,i) => {
+//CLICKS UNTILL FINDING PAIRS
+ const imgArray = [...imgTags];
+
+let flippedCards = [];
+let flippedIndexes = [];
+let matchedIndexes = [];
+
+imgArray.forEach((img, i) => {
     img.addEventListener("click", () => {
-        img.src = images[i];
+        if (!flippedIndexes.includes(i) && !matchedIndexes.includes(i)) {
+            img.src = images[i][0];
+            flippedCards.push(images[i][0]);
+            flippedIndexes.push(i);
+            
+            if (flippedCards.length === 2) {
+                if (flippedCards[0] === flippedCards[1]) {
+                    console.log("Matched!");
+                    matchedIndexes.push(flippedIndexes[0], flippedIndexes[1]);
+                    flippedCards = [];
+                    flippedIndexes = [];
+                } else {
+                    console.log("Not matched!");
+                    setTimeout(() => {
+                        flippedIndexes.forEach(index => {
+                            imgArray[index].src = "/pics/0.PNG";
+                        });
+                        flippedCards = [];
+                        flippedIndexes = [];
+                    }, 500);
+                }
+            }
+        }
     });
 });
+
+
+
+
