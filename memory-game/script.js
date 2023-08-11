@@ -40,9 +40,9 @@ function randomPaths(arr){
 
 let sources = randomPaths(picsPath)
 
-for (let i = 0; i < imgTags.length; i++) {
-    imgTags[i].src = sources[i]
-}
+// for (let i = 0; i < imgTags.length; i++) {
+//     imgTags[i].src = sources[i]
+// }
 
 //MAKES KEY-VALUE PAIRS CREATING IMAGES OBJ
 const images = {}
@@ -51,3 +51,10 @@ sources.forEach((element, index) => {
 });
 
 console.log(images)
+const imgArray = [...imgTags];
+
+imgArray.forEach((img,i) => {
+    img.addEventListener("click", () => {
+        img.src = images[i];
+    });
+});
