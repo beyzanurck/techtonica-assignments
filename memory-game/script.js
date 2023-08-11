@@ -113,5 +113,10 @@ button.addEventListener("click", ()=>{
     resetGame()
 })
 
+//RESULT BUTTON
+const orderButton =  document.getElementById("order")
+orderButton.addEventListener("click", ()=>{
+    window.location.href = "./result/result.html";
+})
 
 
