@@ -20,3 +20,32 @@ for (let i = 0; i < imgTags.length; i++) {
 }
 
 
+//CREATES THE PATHS OF ARRAY THAT INCLUDES RANDOMLY SORTED ELEMENTS
+function randomPaths(arr){
+
+    let randomPicsPath = [];
+    let randomArr = []
+
+    while(randomPicsPath.length < 16){
+        let random_num = Math.floor(Math.random() * (16 - 0) + 0);
+    
+        if(!randomArr.includes(random_num)){
+            randomArr.push(random_num) //adds the index into the array
+            randomPicsPath.push(arr[random_num])
+        }
+        else{
+            random_num = Math.floor(Math.random() * (16 - 0) + 0);
+        }
+    }
+
+    return randomPicsPath
+}
+
+let sources = randomPaths(picsPath)
+
+for (let i = 0; i < imgTags.length; i++) {
+    imgTags[i].src = sources[i]
+}
+
+
+
