@@ -1,3 +1,11 @@
+//COUNTS TIME
+const timer = document.getElementById("timer");
+let seconds = 0;
+function updateCounter() {
+    seconds++;
+    timer.textContent = `${seconds} second${seconds !== 1 ? 's' : ''}`;
+}
+
 //GETS IMAGE PATH
 //browser does not allow to access file system.
 const path = []
@@ -60,6 +68,7 @@ let matchedIndexes = [];
 
 imgArray.forEach((img, i) => {
     img.addEventListener("click", () => {
+
         if (!flippedIndexes.includes(i) && !matchedIndexes.includes(i)) {
             img.src = images[i][0];
             flippedCards.push(images[i][0]);
@@ -86,6 +95,7 @@ imgArray.forEach((img, i) => {
     });
 });
 
+//RESET THE GAME
 function resetGame(){
     matchedIndexes = [];
     flippedCards = [];
@@ -93,11 +103,15 @@ function resetGame(){
     imgArray.forEach((img, i) => {
         img.src = "/pics/0.PNG";
     });
+
+    seconds = 0;
 }
 
 const button =  document.getElementById("reset")
 button.addEventListener("click", ()=>{
+    setInterval(updateCounter, 100);
     resetGame()
 })
+
 
 
