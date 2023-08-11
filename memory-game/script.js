@@ -86,9 +86,18 @@ imgArray.forEach((img, i) => {
     });
 });
 
-const button =  document.getElementsById("reset")
+function resetGame(){
+    matchedIndexes = [];
+    flippedCards = [];
+    flippedIndexes = [];
+    imgArray.forEach((img, i) => {
+        img.src = "/pics/0.PNG";
+    });
+}
+
+const button =  document.getElementById("reset")
 button.addEventListener("click", ()=>{
-    
+    resetGame()
 })
 
 
