@@ -86,6 +86,9 @@ imgArray.forEach((img, i) => {
     });
 });
 
-
+const button =  document.getElementsById("reset")
+button.addEventListener("click", ()=>{
+    
+})
 
 
