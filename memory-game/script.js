@@ -25,16 +25,13 @@ function randomPaths(arr){
 
     let randomPicsPath = [];
     let randomArr = []
-
+    console.log(randomPicsPath[15])
     while(randomPicsPath.length < 16){
         let random_num = Math.floor(Math.random() * (16 - 0) + 0);
     
         if(!randomArr.includes(random_num)){
             randomArr.push(random_num) //adds the index into the array
             randomPicsPath.push(arr[random_num])
-        }
-        else{
-            random_num = Math.floor(Math.random() * (16 - 0) + 0);
         }
     }
 
@@ -47,5 +44,10 @@ for (let i = 0; i < imgTags.length; i++) {
     imgTags[i].src = sources[i]
 }
 
+//MAKES KEY-VALUE PAIRS CREATING IMAGES OBJ
+const images = {}
+sources.forEach((element, index) => {
+    images[index] = element
+});
 
-
+console.log(images)
