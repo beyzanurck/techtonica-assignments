@@ -1,6 +1,7 @@
 //COUNTS TIME
 const timer = document.getElementById("timer");
 let seconds = 0;
+let score = 0;
 function updateCounter() {
     seconds++;
     timer.textContent = `${seconds} second${seconds !== 1 ? 's' : ''}`;
@@ -24,7 +25,7 @@ for (let i = 0; i < imgTags.length; i++) {
 
 //TURNS ALL PICTURES TO THE WHITE
 for (let i = 0; i < imgTags.length; i++) {
-    imgTags[i].src = `/pics/0.PNG`
+    imgTags[i].src = `/pics/0.0.PNG`
 }
 
 
@@ -84,7 +85,7 @@ imgArray.forEach((img, i) => {
                     console.log("Not matched!");
                     setTimeout(() => {
                         flippedIndexes.forEach(index => {
-                            imgArray[index].src = "/pics/0.PNG";
+                            imgArray[index].src = "/pics/0.0.PNG";
                         });
                         flippedCards = [];
                         flippedIndexes = [];
@@ -92,6 +93,13 @@ imgArray.forEach((img, i) => {
                 }
             }
         }
+
+        if(matchedIndexes.length === 16){
+            score = seconds;
+            clearInterval(timer2)
+        }
+
+        console.log(score)
     });
 });
 
@@ -101,22 +109,59 @@ function resetGame(){
     flippedCards = [];
     flippedIndexes = [];
     imgArray.forEach((img, i) => {
-        img.src = "/pics/0.PNG";
+        img.src = "/pics/0.0.PNG";
     });
 
     seconds = 0;
+    clearInterval(timer2)
 }
 
+let timer2;
 const button =  document.getElementById("reset")
 button.addEventListener("click", ()=>{
-    setInterval(updateCounter, 100);
     resetGame()
+    resultDiv.style.visibility = "hidden"
+    timer2 = setInterval(updateCounter, 100);
 })
+
+
+//CREATES A FORM
+const form = document.createElement("form")
+const resultDiv = document.getElementById("result")
+resultDiv.appendChild(form)
+resultDiv.style.visibility = "hidden"
 
 //RESULT BUTTON
 const orderButton =  document.getElementById("order")
 orderButton.addEventListener("click", ()=>{
-    window.location.href = "./result/result.html";
+    resultDiv.style.visibility = "visible"
 })
+
+//CREATES THINGS FOR FORM
+const labelOfName = document.createElement("label")
+form.appendChild(labelOfName)
+labelOfName.setAttribute("for", "full-name")
+labelOfName.textContent = "Full Name: "
+
+const input = document.createElement("input")
+form.appendChild(input)
+input.setAttribute("type", "text")
+input.setAttribute("id", "full-name")
+input.setAttribute("name", "full-name")
+
+const buttonSubmit = document.createElement("button");
+buttonSubmit.setAttribute("type", "submit");
+buttonSubmit.id = "submit_button"
+buttonSubmit.textContent = "Submit";
+form.appendChild(buttonSubmit);
+
+const listOfPeople = document.createElement("p")
+form.appendChild(listOfPeople)
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    listOfPeople.textContent = `${input.value}: ${score}`;
+});
+
 
 
